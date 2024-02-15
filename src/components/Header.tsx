@@ -1,14 +1,9 @@
 "use client";
 
 import { MobileNavBar, NavBar } from "@/components/NavBar";
-import { Bebas_Neue } from "next/font/google";
 import Image from "next/image";
 import { useState } from "react";
 
-const BebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 export const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
