@@ -1,45 +1,121 @@
 "use client";
 
+import { Menu } from "@/icons/Menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useRef } from "react";
+import { Dispatch, useCallback, useRef } from "react";
 
-export const NavBar = () => {
+type NavBarProps = {
+  setDropdownOpen: Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const NavBar = ({ setDropdownOpen }: NavBarProps) => {
+  return (
+    <>
+      <button
+        className="md:hidden flex h-16 items-center"
+        onClick={() => setDropdownOpen((o) => !o)}
+      >
+        <Menu />
+      </button>
+      <nav className="md:flex hidden gap-4 relative h-16 items-center">
+        <NavButtons />
+      </nav>
+    </>
+  );
+};
+
+type MobileNavBarProps = {
+  dropdownOpen: boolean;
+};
+
+export const MobileNavBar = ({ dropdownOpen }: MobileNavBarProps) => {
+  return (
+    <nav
+      className={`${
+        dropdownOpen ? "h-[145px] border-b" : "h-0"
+      } flex flex-col md:hidden overflow-hidden border-secondary items-center relative`}
+      style={{
+        transition: "height 0.3s",
+      }}
+    >
+      <NavButtons />
+    </nav>
+  );
+};
+
+const useUnderline = () => {
   const pathname = usePathname();
   const underlineRef = useRef<HTMLDivElement>(null);
   const navRef = useCallback(
-    (node: HTMLElement) => {
+    (node: HTMLDivElement) => {
       if (node) {
-        node.querySelectorAll("a").forEach((a) => {
-          console.log(a.href, pathname);
-          if (new URL(a.href).pathname === pathname) {
-            underlineRef.current?.style.setProperty(
-              "left",
-              `${a.offsetLeft}px`
-            );
-            underlineRef.current?.style.setProperty(
-              "width",
-              `${a.offsetWidth}px`
-            );
-          }
-        });
+        const anchor = node.querySelector("a");
+        if (!anchor) return;
+        if (new URL(anchor.href).pathname === pathname) {
+          underlineRef.current?.style.setProperty(
+            "left",
+            `${node.offsetLeft}px`
+          );
+          underlineRef.current?.style.setProperty(
+            "width",
+            `${node.offsetWidth}px`
+          );
+          underlineRef.current?.style.setProperty(
+            "top",
+            `${node.offsetTop + node.offsetHeight - 4}px`
+          );
+        }
       }
     },
     [pathname]
   );
+  return { underlineRef, navRef };
+};
+
+const NavButtons = () => {
+  const { underlineRef, navRef } = useUnderline();
   return (
-    <nav className="flex gap-4 relative" ref={navRef}>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/projects">Projects</Link>
-      <Link href="/contact">Contact</Link>
+    <>
       <div
-        className="absolute w-10 h-1 bg-white"
+        className="absolute h-1 bg-accent bottom-0 rounded-md w-0 left-0"
         ref={underlineRef}
         style={{
           transition: "left 0.3s, width 0.3s",
         }}
       />
-    </nav>
+      <div ref={navRef} className="md:h-full items-center flex">
+        <Link
+          href="/"
+          className="hover:bg-secondary rounded-md p-1 transition-colors text-lg"
+        >
+          Home
+        </Link>
+      </div>
+      <div ref={navRef} className="md:h-full items-center flex">
+        <Link
+          href="/about"
+          className="hover:bg-secondary rounded-md p-1 transition-colors text-lg"
+        >
+          About
+        </Link>
+      </div>
+      <div ref={navRef} className="md:h-full items-center flex">
+        <Link
+          href="/projects"
+          className="hover:bg-secondary rounded-md p-1 transition-colors text-lg"
+        >
+          Projects
+        </Link>
+      </div>
+      <div ref={navRef} className="md:h-full items-center flex">
+        <Link
+          href="/contact"
+          className="hover:bg-secondary rounded-md p-1 transition-colors text-lg"
+        >
+          Contact
+        </Link>
+      </div>
+    </>
   );
 };

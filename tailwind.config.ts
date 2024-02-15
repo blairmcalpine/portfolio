@@ -8,10 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "rgb(var(--color-primary))",
+        secondary: "rgb(var(--color-secondary))",
+        tertiary: "rgb(var(--color-tirtiary))",
+        accent: "rgb(var(--color-accent))",
+        secondaryAccent: "rgb(var(--color-secondary-accent))",
+        onPrimary: "rgb(var(--color-onPrimary))",
+        onSecondary: "rgb(var(--color-onSecondary))",
+        onTertiary: "rgb(var(--color-onTertiary))",
+        onAccent: "rgb(var(--color-onAccent))",
+        onSecondaryAccent: "rgb(var(--color-onSecondaryAccent))",
+      },
+      fontSize: {
+        "40": ["2.5rem", "2.5rem"],
       },
     },
   },
