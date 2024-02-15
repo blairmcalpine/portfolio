@@ -16,7 +16,6 @@ export const Header = () => {
         <div className="basis-1/3 grid place-items-center">
           <Image
             src="/logo.png"
-            // className="hidden md:inline"
             alt="Blair's Memoji"
             width={38.4}
             height={48}
