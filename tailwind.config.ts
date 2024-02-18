@@ -11,9 +11,9 @@ const config: Config = {
       colors: {
         primary: "rgb(var(--color-primary))",
         secondary: "rgb(var(--color-secondary))",
-        tertiary: "rgb(var(--color-tirtiary))",
+        tertiary: "rgb(var(--color-tertiary))",
         accent: "rgb(var(--color-accent))",
-        secondaryAccent: "rgb(var(--color-secondary-accent))",
+        secondaryAccent: "rgb(var(--color-secondaryAccent))",
         onPrimary: "rgb(var(--color-onPrimary))",
         onSecondary: "rgb(var(--color-onSecondary))",
         onTertiary: "rgb(var(--color-onTertiary))",

@@ -8,7 +8,7 @@
         --color-secondary: 229 229 229;
         --color-tertiary: 0 0 0;
         --color-accent: 251 133 0;
-        --color-secondaryAccent: 255 183 3;
+        --color-secondaryAccent: 255 220 3;
         --color-onPrimary: 0 0 0;
         --color-onSecondary: 0 0 0;
         --color-onTertiary: 256 256 256;
@@ -23,7 +23,26 @@
           --color-tertiary: 256 256 256;
           --color-onPrimary: 256 256 256;
           --color-onTertiary: 0 0 0 0;
+          --color-accent: 0 179 157;
+            --color-onAccent: 0 0 0;
+            --color-secondaryAccent: 17 223 0;
+            --color-onSecondaryAccent: 0 0 0;
         }
-        }
+                }
+        
+                body {
+                  height: 100dvh;
+                  height: 100vh;
+                }
+        
+                .text-accent-fade {
+                  background-color: rgb(var(--color-accent));
+                  background: linear-gradient(to right, rgb(var(--color-accent)), rgb(var(--color-secondaryAccent)));
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  -moz-text-fill-color: transparent;
+}
 }
 
