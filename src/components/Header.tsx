@@ -9,7 +9,7 @@ export const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
-      <header className="flex justify-between items-center border-b border-secondary px-4 md:px-6">
+      <header className="flex justify-between items-center border-b border-secondary px-4 md:px-6 h-[65px] sticky top-0 bg-primary">
         <div className="basis-1/3 flex items-center">
           <p className={`text-40 font-extrabold`}>BLAIR</p>
         </div>

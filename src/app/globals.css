@@ -4,45 +4,53 @@
 
 @layer base {
   :root {
-      --color-primary: 256 256 256;
-        --color-secondary: 229 229 229;
-        --color-tertiary: 0 0 0;
-        --color-accent: 251 133 0;
-        --color-secondaryAccent: 255 220 3;
-        --color-onPrimary: 0 0 0;
-        --color-onSecondary: 0 0 0;
-        --color-onTertiary: 256 256 256;
-        --color-onAccent: 256 256 256;
-        --color-onSecondaryAccent: 256 256 256;
-      }
-      
-      @media (prefers-color-scheme: dark) {
-        :root {
+    --color-primary: 256 256 256;
+      --color-secondary: 229 229 229;
+      --color-tertiary: 0 0 0;
+      --color-accent: 251 133 0;
+      --color-secondaryAccent: 255 220 3;
+      --color-onPrimary: 0 0 0;
+      --color-onSecondary: 0 0 0;
+      --color-onTertiary: 256 256 256;
+      --color-onAccent: 256 256 256;
+      --color-onSecondaryAccent: 256 256 256;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
         --color-primary: 0 0 0;
-          --color-secondary: 100 100 100;
-          --color-tertiary: 256 256 256;
-          --color-onPrimary: 256 256 256;
-          --color-onTertiary: 0 0 0 0;
-          --color-accent: 0 179 157;
-            --color-onAccent: 0 0 0;
-            --color-secondaryAccent: 17 223 0;
-            --color-onSecondaryAccent: 0 0 0;
-        }
-                }
-        
-                body {
-                  height: 100dvh;
-                  height: 100vh;
-                }
-        
-                .text-accent-fade {
-                  background-color: rgb(var(--color-accent));
-                  background: linear-gradient(to right, rgb(var(--color-accent)), rgb(var(--color-secondaryAccent)));
-                  -webkit-background-clip: text;
-                  -moz-background-clip: text;
-                  background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                  -moz-text-fill-color: transparent;
-}
+        --color-secondary: 100 100 100;
+        --color-tertiary: 256 256 256;
+        --color-onPrimary: 256 256 256;
+        --color-onTertiary: 0 0 0 0;
+        --color-accent: 0 179 157;
+        --color-onAccent: 0 0 0;
+        --color-secondaryAccent: 17 223 0;
+        --color-onSecondaryAccent: 0 0 0;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
+    ::-moz-scrollbar {
+      display: none;
+    }
+    
+    .text-accent-fade {
+      background-color: rgb(var(--color-accent));
+      background: linear-gradient(to right, rgb(var(--color-accent)), rgb(var(--color-secondaryAccent)));
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
 }
 

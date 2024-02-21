@@ -50,7 +50,7 @@ const useUnderline = () => {
   const navRef = useCallback(
     (node: HTMLDivElement) => {
       if (node) {
-        const anchor = node.querySelector("a");
+        const anchor = node.querySelector('a');
         if (!anchor) return;
         if (new URL(anchor.href).pathname === pathname) {
           underlineRef.current?.style.setProperty(
