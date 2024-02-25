@@ -1,12 +1,16 @@
 import { Experience } from "@/components/Experience";
 import { Hero } from "@/components/Hero";
+import { Metadata } from 'next';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <div className="h-[65px]" />
       <Experience />
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Home - Blair McAlpine',
+};

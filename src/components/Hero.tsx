@@ -4,7 +4,7 @@ import { LinkedIn } from "@/icons/LinkedIn";
 
 export const Hero = () => {
   return (
-    <section className="flex flex-col w-full h-[calc(100dvh-65px)] justify-center items-center gap-8 px-4">
+    <section className="flex flex-col w-full h-[calc(100dvh-4rem)] justify-center items-center gap-8 px-4">
       <div className="flex gap-8">
         <div className="flex flex-col justify-center gap-4">
           <h1 className="text-7xl font-bold">
@@ -17,13 +17,21 @@ export const Hero = () => {
           </span>
           <div className="flex gap-3">
             <a href="https://www.github.com/blairmcalpine" target="_blank">
-              <GitHub className="text-secondary hover:text-onPrimary transition-colors" />
+              <GitHub
+                className="text-secondary hover:text-onPrimary transition-colors"
+                width={36}
+                height={36}
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/blair-mcalpine/"
               target="_blank"
             >
-              <LinkedIn className="text-secondary hover:text-onPrimary transition-colors" />
+              <LinkedIn
+                className="text-secondary hover:text-onPrimary transition-colors"
+                width={36}
+                height={36}
+              />
             </a>
           </div>
         </div>

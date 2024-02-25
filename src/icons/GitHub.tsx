@@ -1,8 +1,8 @@
 import { SVGProps } from "react";
 
 export const GitHub = ({
-  width = 24,
-  height = 24,
+  width = 98,
+  height = 96,
   ...rest
 }: SVGProps<SVGSVGElement>) => {
   return (

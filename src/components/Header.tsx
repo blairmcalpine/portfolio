@@ -9,9 +9,9 @@ export const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
-      <header className="flex justify-between items-center border-b border-secondary px-4 md:px-6 h-[65px] sticky top-0 bg-primary">
+      <header className="z-10 flex justify-between items-center border-b border-secondary px-4 md:px-6 h-16 sticky top-0 bg-primary">
         <div className="basis-1/3 flex items-center">
-          <p className={`text-40 font-extrabold`}>BLAIR</p>
+          <p className="text-40 font-extrabold">BLAIR</p>
         </div>
         <div className="basis-1/3 grid place-items-center">
           <Image src="/logo.png" alt="Blair's Memoji" width={38} height={48} />

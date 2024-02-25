@@ -24,7 +24,7 @@ const config: Config = {
         '40': ['2.5rem', '2.5rem'],
       },
       boxShadow: {
-        accent: '0px 0px 20px 0px rgb(var(--color-accent))',
+        accent: '0px 0px 10px 0px rgb(var(--color-accent))',
       },
     },
   },
