@@ -1,6 +1,7 @@
 import { Age } from "@/components/Age";
-import { GitHub } from "@/icons/GitHub";
-import { LinkedIn } from "@/icons/LinkedIn";
+import { AnimatedLink } from '@/components/AnimatedLink';
+import { GitHub } from '@/icons/GitHub';
+import { LinkedIn } from '@/icons/LinkedIn';
 
 export const Hero = () => {
   return (
@@ -37,12 +38,20 @@ export const Hero = () => {
         </div>
         <div className="w-96 h-96 hidden md:block rounded-xl border-secondary border" />
       </div>
-      <a
-        className="bg-accent rounded-lg w-fit p-3 text-xl font-semibold text-onAccent transition-shadow hover:shadow-accent"
-        href="#experience"
-      >
-        What I&apos;ve Done ↓
-      </a>
+      <div className="flex gap-4">
+        <AnimatedLink
+          className="border border-onPrimary rounded-lg w-fit px-4 py-2 text-xl transition-shadow hover:shadow-onPrimary"
+          href="/contact"
+        >
+          Contact Me
+        </AnimatedLink>
+        <a
+          className="bg-accent rounded-lg w-fit px-4 py-2 text-xl text-onAccent transition-shadow hover:shadow-accent"
+          href="#experience"
+        >
+          What I&apos;ve Done ↓
+        </a>
+      </div>
     </section>
   );
 };

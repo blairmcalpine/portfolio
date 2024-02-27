@@ -6,7 +6,7 @@
   :root {
     --color-primary: 256 256 256;
       --color-secondary: 229 229 229;
-      --color-tertiary: 0 0 0;
+      --color-tertiary: 161 161 170;
       --color-accent: 251 133 0;
       --color-secondaryAccent: 255 220 3;
       --color-onPrimary: 0 0 0;
@@ -14,13 +14,13 @@
       --color-onTertiary: 256 256 256;
       --color-onAccent: 256 256 256;
       --color-onSecondaryAccent: 256 256 256;
+      --color-error: 255 0 0;
     }
     
     @media (prefers-color-scheme: dark) {
       :root {
         --color-primary: 9 9 11;
         --color-secondary: 100 100 100;
-        --color-tertiary: 161 161 170;
         --color-onPrimary: 256 256 256;
         --color-onTertiary: 0 0 0 0;
         --color-accent: 0 179 157;

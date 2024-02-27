@@ -19,12 +19,14 @@ const config: Config = {
         onTertiary: 'rgb(var(--color-onTertiary))',
         onAccent: 'rgb(var(--color-onAccent))',
         onSecondaryAccent: 'rgb(var(--color-onSecondaryAccent))',
+        error: 'rgb(var(--color-error))',
       },
       fontSize: {
         '40': ['2.5rem', '2.5rem'],
       },
       boxShadow: {
         accent: '0px 0px 10px 0px rgb(var(--color-accent))',
+        onPrimary: '0px 0px 10px 0px rgb(var(--color-onPrimary))',
       },
     },
   },

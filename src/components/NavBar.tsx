@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatedLink } from '@/components/Link';
+import { AnimatedLink } from '@/components/AnimatedLink';
 import { Menu } from '@/icons/Menu';
 import { usePathname } from 'next/navigation';
 import { Dispatch, useCallback, useRef } from 'react';

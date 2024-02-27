@@ -6,19 +6,19 @@ import Link from 'next/link';
 export const Experience = () => {
   return (
     <section
-      className="min-h-dvh w-full md:px-16 md:pt-32 pt-20 px-4 pb-4 md:pb-16 flex flex-col"
+      className="flex min-h-dvh w-full flex-col px-4 pb-4 pt-20 md:px-16 md:pb-16 md:pt-32"
       id="experience"
     >
-      <div className="flex flex-col w-full gap-4 md:gap-8 flex-1 border border-secondary rounded-xl p-4 md:p-8">
-        <h2 className="text-5xl md:text-7xl font-bold">Experience</h2>
+      <div className="flex w-full flex-1 flex-col gap-4 rounded-xl border border-secondary p-4 md:gap-8 md:p-8">
+        <h2 className="text-5xl font-bold md:text-7xl">Experience</h2>
         <p className="text-xl">
           Amazing opportunities that I gained during my time in the co-op
           program at the University of Waterloo.
         </p>
-        <div className="flex md:flex-row flex-col gap-4 md:gap-8">
+        <div className="flex flex-col gap-4 md:flex-row md:gap-8">
           <Card
             logo={
-              <Otto className="text-onPrimary w-full" width={180} height={64} />
+              <Otto className="w-full text-onPrimary" width={180} height={64} />
             }
             href="https://www.ottointelligence.co/"
           >
@@ -26,7 +26,7 @@ export const Experience = () => {
               Full-Stack Engineer
             </h3>
             <h4 className="text-3xl font-bold">Otto Intelligence • 2022</h4>
-            <ol className="text-tertiary text-lg">
+            <ol className="text-lg text-tertiary">
               <li>
                 • Full stack mobile-web application development using Next.js,
                 TypeScript, React, Tailwind CSS, GraphQL, Prisma and PostgreSQL
@@ -42,7 +42,7 @@ export const Experience = () => {
             </ol>
           </Card>
           <Card
-            logo={<Arcturus className="text-onPrimary w-full" />}
+            logo={<Arcturus className="w-full text-onPrimary" />}
             href="https://www.arcturusnetworks.com/"
           >
             <h3 className="text-4xl font-bold text-secondaryAccent">
@@ -71,7 +71,7 @@ export const Experience = () => {
             href="https://www.faire.com/"
             logo={
               <Faire
-                className="text-onPrimary w-full"
+                className="w-full text-onPrimary"
                 width={312}
                 height={39}
               />
@@ -81,7 +81,7 @@ export const Experience = () => {
               Front-End Engineer
             </h3>
             <h4 className="text-3xl font-bold">Faire • 2023</h4>
-            <ol className="text-tertiary text-lg">
+            <ol className="text-lg text-tertiary">
               <li>
                 • Part of the core platform team migrating Faire.com to Next.js
                 as a frontend framework
@@ -106,11 +106,11 @@ export const Experience = () => {
             </ol>
           </Card>
         </div>
-        <p className="w-full text-center text-secondary text-balance text-lg">
+        <p className="w-full text-balance text-center text-lg text-secondary">
           Looking for a detailed resumé?{' '}
           <Link
             href="/Blair%20McAlpine%20Resume.pdf"
-            className="underline text-onPrimary"
+            className="text-onPrimary underline"
             target="_blank"
           >
             View it here
