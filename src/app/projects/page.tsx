@@ -1,7 +1,12 @@
+import { TrackList } from '@/components/TrackList';
 import { Metadata } from 'next';
 
 const ProjectsPage = () => {
-  return <div>Projects</div>;
+  return (
+    <div>
+      <TrackList />
+    </div>
+  );
 };
 
 export default ProjectsPage;

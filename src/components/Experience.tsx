@@ -11,7 +11,7 @@ export const Experience = () => {
     >
       <div className="flex w-full flex-1 flex-col gap-4 rounded-xl border border-secondary p-4 md:gap-8 md:p-8">
         <h2 className="text-5xl font-bold md:text-7xl">Experience</h2>
-        <p className="text-xl">
+        <p className="text-xl text-tertiary">
           Amazing opportunities that I gained during my time in the co-op
           program at the University of Waterloo.
         </p>
@@ -26,18 +26,23 @@ export const Experience = () => {
               Full-Stack Engineer
             </h3>
             <h4 className="text-3xl font-bold">Otto Intelligence • 2022</h4>
-            <ol className="text-lg text-tertiary">
+            <ol className="flex flex-col gap-2 text-lg text-tertiary ">
               <li>
-                • Full stack mobile-web application development using Next.js,
-                TypeScript, React, Tailwind CSS, GraphQL, Prisma and PostgreSQL
+                • Full stack responsive web application development using
+                Next.js, TypeScript, React, Tailwind CSS, GraphQL, Prisma and
+                PostgreSQL
               </li>
               <li>
-                • Independently created time-sensitive financial feature sets on
-                a weekly basis
+                • Lead the migration of all sensitive customer survey data from
+                MongoDB to PostgreSQL
               </li>
-              <li>• Developed email, logging and Stripe integrations</li>
+              <li>• Developed email, DataDog and Stripe integrations</li>
               <li>
                 • Wrote robust integration and unit tests for GraphQL APIs
+              </li>
+              <li>
+                • Migrated codebases to a monorepo to create easy code sharing
+                and increase developer productivity
               </li>
             </ol>
           </Card>
@@ -49,21 +54,22 @@ export const Experience = () => {
               Full-Stack Engineer
             </h3>
             <h4 className="text-3xl font-bold">Arcturus Networks • 2023</h4>
-            <ol className="text-lg text-tertiary">
+            <ol className="flex flex-col gap-2 text-lg text-tertiary">
               <li>
                 • Full stack web development for the Brinq Edge AI Machine
-                Vision platform
+                Vision platform using React, Express, PostgreSQL, and InfluxDB
               </li>
               <li>
-                • RESTful Node.js API integration and updating alongside
-                PostgreSQL and InfluxDB
+                • Worked directly with the machine vision inference pipeline
+                using C++, sockets, and Docker
               </li>
               <li>
-                • Machine vision inference using C++, web sockets, and Docker
+                • Created highly efficient frontend interactions with D3.js,
+                reducing browser load and API response time by up to 95%
               </li>
               <li>
-                • Highly efficient frontend interactions using React, Redux,
-                D3.js, Recharts, and SocketIO
+                • Created highly efficient frontend interactions with D3.js and
+                Redux, reducing browser load and API response time by up to 95%
               </li>
             </ol>
           </Card>
@@ -81,7 +87,7 @@ export const Experience = () => {
               Front-End Engineer
             </h3>
             <h4 className="text-3xl font-bold">Faire • 2023</h4>
-            <ol className="text-lg text-tertiary">
+            <ol className="flex flex-col gap-2 text-lg text-tertiary ">
               <li>
                 • Part of the core platform team migrating Faire.com to Next.js
                 as a frontend framework
@@ -91,14 +97,13 @@ export const Experience = () => {
                 Pre-rendering to greatly reduce load time and bundle size
               </li>
               <li>
-                • Statistical analysis of these changes, in particular positive
-                impacts to sign up rates
+                • Detailed statistical analysis of these changes, resulting in
+                positive impacts to sign up rates of up to 5% site-wide
               </li>
               <li>
                 • Low level JavaScript debugging and performance optimization,
                 including Node.js and Next.js source code evaluation
               </li>
-              <li>• Unit testing with Jest, end-to-end testing with Cypress</li>
               <li>
                 • Working directly with product teams to teach new React
                 patterns to create efficient server code
@@ -106,16 +111,18 @@ export const Experience = () => {
             </ol>
           </Card>
         </div>
-        <p className="w-full text-balance text-center text-lg text-secondary">
-          Looking for a detailed resumé?{' '}
-          <Link
-            href="/Blair%20McAlpine%20Resume.pdf"
-            className="text-onPrimary underline"
-            target="_blank"
-          >
-            View it here
-          </Link>
-        </p>
+        <div className="grid w-full flex-1 place-items-center">
+          <p className="text-balance text-center text-lg text-secondary">
+            Looking for a detailed resumé?{' '}
+            <Link
+              href="/Blair%20McAlpine%20Resume.pdf"
+              className="text-onPrimary underline"
+              target="_blank"
+            >
+              View it here
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   );
