@@ -1,7 +1,12 @@
+import { NewHero } from '@/components/NewHero';
 import { Metadata } from 'next';
 
 const AboutPage = () => {
-  return <div>About</div>;
+  return (
+    <div className="h-dvh w-full">
+      <NewHero />
+    </div>
+  );
 };
 
 export default AboutPage;
