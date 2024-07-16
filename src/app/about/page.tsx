@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 
 const AboutPage = () => {
   const rows = new Array(80).fill(0);
-  const cols = new Array(60).fill(0);
+  const cols = new Array(80).fill(0);
   return (
     <div className="relative h-[calc(100dvh-4rem)]">
       <div className="absolute h-[calc(100dvh-4rem)] w-full">
