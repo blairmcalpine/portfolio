@@ -24,7 +24,11 @@ export const AnimatedLink = (props: LinkProps) => {
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
-    if (!document.startViewTransition || prefersReducedMotion) {
+    if (
+      !document.startViewTransition ||
+      prefersReducedMotion ||
+      props.href.toString() === pathname
+    ) {
       props.onClick?.(e);
       return;
     } else {
